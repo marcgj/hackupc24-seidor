@@ -34,7 +34,7 @@ async fn main() -> std::io::Result<()> {
         }
         .wrap(Logger::default())
     })
-    .bind(("0.0.0.0", 8081))?
+    .bind(("0.0.0.0", 8080))?
     .run()
     .await
 }
