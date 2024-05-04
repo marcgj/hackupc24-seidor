@@ -23,3 +23,11 @@ services:
     ports:
       - 8080:8080
     build: ./backend
+
+  pdf-gen:
+    depends_on:
+      - backend
+
+    build: ./pdf-gen
+    ports:
+      - 8081:8081
