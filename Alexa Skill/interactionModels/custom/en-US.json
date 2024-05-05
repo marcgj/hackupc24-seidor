@@ -1,0 +1,216 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "name",
+              "type": "AMAZON.FirstName"
+            }
+          ],
+          "name": "HelloNameIntent",
+          "samples": [
+            "My name is {name}  salute me",
+            "Say hello to my cat"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ApiTestIntent",
+          "samples": [
+            "test the api"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "ItemName",
+              "type": "warehouse_items"
+            }
+          ],
+          "name": "SearchItem",
+          "samples": [
+            "Where is the {ItemName} located",
+            "Where is the {ItemName}",
+            "Where is {ItemName} located",
+            "Where is {ItemName}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "orderOfItem",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "name": "SelectItemByNumber",
+          "samples": [
+            "I want the {orderOfItem}",
+            "The {orderOfItem}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "itemid",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "itemqty",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "name": "AddToInvoice",
+          "samples": [
+            "add {itemqty} of item {itemid} to the invoice",
+            "add {itemqty} of {itemid} to the invoice",
+            "add item {itemid} to the invoice"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "itemDescription",
+              "type": "description"
+            }
+          ],
+          "name": "SearchByDescription",
+          "samples": [
+            "Where can I find the {itemDescription}",
+            "Where can I find a {itemDescription}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "FinishInvoice",
+          "samples": [
+            "finish the invoice",
+            "Finish invoice"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Simple Bed"
+              }
+            },
+            {
+              "name": {
+                "value": "Honkermil"
+              }
+            },
+            {
+              "name": {
+                "value": "Sönkiler"
+              }
+            },
+            {
+              "name": {
+                "value": "Nordviken"
+              }
+            }
+          ],
+          "name": "warehouse_items"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "fifth"
+              }
+            },
+            {
+              "name": {
+                "value": "fourth"
+              }
+            },
+            {
+              "name": {
+                "value": "third"
+              }
+            },
+            {
+              "name": {
+                "value": "second"
+              }
+            },
+            {
+              "name": {
+                "value": "first"
+              }
+            }
+          ],
+          "name": "ordinal"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "furniture"
+              }
+            },
+            {
+              "name": {
+                "value": "bar furniture"
+              }
+            },
+            {
+              "name": {
+                "value": "strange sink"
+              }
+            },
+            {
+              "name": {
+                "value": "sink"
+              }
+            },
+            {
+              "name": {
+                "value": "Best bed"
+              }
+            },
+            {
+              "name": {
+                "value": "cheap bed"
+              }
+            },
+            {
+              "name": {
+                "value": "comfy"
+              }
+            }
+          ],
+          "name": "description"
+        }
+      ],
+      "invocationName": "shop assistant"
+    }
+  }
+}
